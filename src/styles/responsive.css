@@ -1,0 +1,164 @@
+@media screen and (min-width: 700px) {
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+
+}
+
+@media screen and (min-width: 650px) {
+    .post-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .post-item__title {
+        font-size: 18px;
+    }
+
+    .post-item__description {
+        font-size: 14px;
+    }
+
+    .menu-restaurant {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 18px;
+    }
+
+}
+
+@media screen and (max-width:756px) {
+    .nav__list {
+        z-index: 10;
+        background-color: #fff;
+        width: 300px;
+        border-radius: 5px;
+        position: absolute;
+        top: 60px;
+
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav__item {
+        color: #000;
+        display: list-item;
+        border-bottom: 1px solid #b35c00;
+        border-radius: 5px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav a:hover {
+        background-color: transparent;
+    }
+
+    .menu__toggler {
+        grid-column: 1 / span 1;
+        /* Mulai dari kolom pertama */
+        justify-self: start;
+        /* Posisikan tombol menu di kiri */
+    }
+
+    .name__brand {
+        grid-column: 2 / span 1;
+        /* Mulai dari kolom kedua */
+        justify-self: start;
+        /* Posisikan brand di kanan */
+    }
+
+    .nav.sticky button {
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 757px) {
+    .menu__toggler {
+        display: none;
+    }
+
+    .name__brand img {
+        width: 180px;
+        margin: 15px;
+    }
+
+    .nav__item {
+        font-size: 14px;
+        width: 28%;
+    }
+
+    .nav a:hover {
+        font-size: 16px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__tagline {
+        font-size: 20px;
+    }
+
+    .explore__label {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .restaurant-detail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        grid-gap: 16px;
+    }
+
+    .customer-section{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        background-size: auto 100vh;
+        min-width: 1000px;
+    }
+
+    .name__brand img {
+        width: 200px;
+    }
+
+    .hero__title {
+        font-size: 40px;
+    }
+
+    .hero__tagline {
+        font-size: 24px;
+    }
+
+    .explore__label {
+        font-size: 40px;
+    }
+}

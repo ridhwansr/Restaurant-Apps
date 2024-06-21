@@ -1,0 +1,397 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip Content */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+  text-decoration: none;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Navbar */
+
+.menu__toggler {
+  min-width: 44px;
+  min-height: 44px;
+  color: #000000;
+  font-size: 16px;
+  background-color: #fff;
+  border: 0;
+  position: absolute;
+  top: 15px;
+  /* Mengatur jarak dari atas */
+  left: 20px;
+  /* Mengatur jarak dari kiri */
+  z-index: 102;
+  /* Mengatur z-index agar tombol selalu muncul di atas hero */
+}
+
+.name__brand img {
+  width: 150px;
+  margin: 15px;
+}
+
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 101;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav a {
+  width: 80%;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 10px;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #FD982E;
+  transition: font-size 0.3s ease;
+}
+
+.nav a:hover {
+  width: 80%;
+  text-decoration: underline;
+  color: #000;
+  background-color: #FD982E;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  /* Ubah warna latar belakang sesuai kebutuhan Anda */
+  z-index: 1000;
+  /* Pastikan z-index cukup tinggi untuk memastikan navigasi tampil di atas konten lainnya */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Gambar dalam hero untuk menutupi area hero dengan baik */
+.hero picture,
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Agar gambar menutupi seluruh kontainer dengan baik */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Konten dalam hero */
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 270px;
+}
+
+/* Judul dalam hero */
+.hero__title {
+  color: #FD982E;
+  font-weight: 700;
+  font-size: 26px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tagline dalam hero */
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Detail */
+
+.restaurant-detail {
+  margin: 32px auto auto;
+  text-align: left;
+  display: grid;
+  grid-row-gap: 16px;
+  margin-top: 70px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.restaurant-image {
+  width: 100%;
+}
+
+.restaurant-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-info {
+  flex: 1;
+  padding: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-info h1 {
+  font-size: 24px;
+  color: #FD982E;
+}
+
+.restaurant-info p {
+  margin: 10px 0;
+}
+
+.restaurant-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.restaurant-info ul li {
+  margin-bottom: 10px;
+}
+
+.menu-section {
+  margin: 20px 0;
+}
+
+.menu-section h2 {
+  font-size: 20px;
+  color: #FD982E;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section ul li {
+  margin: 5px 0;
+}
+
+.customer-section {
+  padding: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.customer-section h2 {
+  font-size: 20px;
+  color: #FD982E;
+}
+
+/* Favorite */
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main */
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Content */
+
+.content {
+  padding: 20px;
+}
+
+/* Explore Restaurant */
+
+.explore {
+  width: 100%;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.explore__label {
+  color: #FD982E;
+  font-size: 26px;
+  font-weight: 500;
+  font-weight: lighter;
+}
+
+.explore__label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Post */
+
+.posts {
+  margin: 32px auto auto;
+  text-align: left;
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.post-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post-item__content {
+  padding: 16px 32px 32px 32px;
+}
+
+.post-item__thumbnail {
+  width: 100%;
+}
+
+.post-item__rating {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.post-item__rating__author {
+  color: red;
+  text-decoration: none;
+}
+
+.post-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.post-item__title:hover {
+  font-size: 19px;
+  transition: 0.3;
+}
+
+.post-item__title a {
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* Footer */
+
+footer {
+  background-color: #FD982E;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 14px;
+}
